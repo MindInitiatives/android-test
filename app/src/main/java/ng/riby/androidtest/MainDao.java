@@ -23,13 +23,29 @@ public interface MainDao {
 
     //Delete all query
     @Delete
-    void reset(List<MainData> mainData);
+    void reset(MainData mainData);
+//
+//    //update query
+//    @Query("UPDATE table_name SET longitude = :longitude  AND Latitude = :latitude  WHERE ID = :sID")
+//    void update(int sID, float longitude, float latitude);
+//
+//    //Get latitude data query
+//    @Query("SELECT Latitude = :latitude FROM table_name WHERE ID = :sID")
+//    void getLatitude(Float latitude, int sID);
+//
+//    //Get longitude data query
+//    @Query("SELECT longitude = :longitude FROM table_name WHERE ID = :sID")
+//    void getLongitude(Float longitude, int sID);
 
-    //update query
-    @Query("UPDATE table_name SET text = :sText WHERE ID = :sID")
-    void update(int sID, String sText);
+    //Get Point A
+    @Query("SELECT * FROM table_name WHERE ID = :sID")
+    MainData getPointA(int sID);
+
+    //Get Point B
+    @Query("SELECT * FROM table_name WHERE ID = :sID")
+    MainData getPointB(int sID);
 
     //Get all data query
     @Query("SELECT * FROM table_name")
-    List<MainData> getAll();
+    MainData getAll();
 }

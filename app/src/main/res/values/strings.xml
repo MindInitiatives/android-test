@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Android Test</string>
     <string name="start">Start</string>
+    <string name="capturing">Capturing...</string>
+    <string name="map_direction_key">AIzaSyBGwpL-qCmunMeN4C4iyTbzoRE1_sZmiss</string>
+    <string name="stop">stop</string>
 </resources>

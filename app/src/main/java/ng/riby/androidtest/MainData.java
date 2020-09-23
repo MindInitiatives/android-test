@@ -17,8 +17,12 @@ public class MainData implements Serializable {
     private int ID;
 
     //Creating text column
-    @ColumnInfo(name = "text")
-    private String text;
+    @ColumnInfo(name = "longitude")
+    private double longitude;
+
+    //Creating text column
+    @ColumnInfo(name = "latitude")
+    private double latitude;
 
     //Generating getter and setter
 
@@ -31,11 +35,19 @@ public class MainData implements Serializable {
         this.ID = ID;
     }
 
-    public String getText() {
-        return text;
+    public double getLongitude() {
+        return longitude;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 }
